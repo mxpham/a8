@@ -1,0 +1,99 @@
+<!--
+Date: December 4th, 2018
+SID: 01617504
+91.61 GUI Programming I Assignment: Creating an Interactive Dynamic Table with
+tabs and sliders.
+Mai Pham, UMass Lowell Computer Science, Mai_Pham@student.uml.edu
+Copyright (c) 2018 by Mai Pham. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/style.css" />
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- included plugins-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.slider.js"></script>
+  <script src="js/calculation.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="js/jquery.tabs.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <h2>Dynamic Multiplication Table</h2>
+  <!-- create table to format page-->
+    <table>
+    <tr>
+      <td>
+        <!-- creates form to ask for inputs, implement slider and produce multiplication table-->
+        <form id="multiply-form">
+          <table>
+            <tr>
+              <td id="minrow">Minimum Row Value</td>
+              <td><input type="text" class="form-control" id="h1" placeholder="Enter a number" name="h1" required></td>
+              <td><div class="slider" id="sliderXBegin"></div></td>
+            </tr>
+            <tr>
+              <td id="maxrow">Maximum Row Value</td>
+              <td><input type="text" class="form-control" id="h2" placeholder="Enter a number" name="h2" required></td>
+              <td><div class="slider" id="sliderXEnd"></div></td>
+            </tr>
+            <tr>
+              <td id="mincol">Minimum Column Value</td>
+              <td><input type="text" class="form-control" id="v1" placeholder="Enter a number" name="v1" required></td>
+              <td><div class="slider" id="sliderYBegin"></div></td>
+            </tr>
+            <tr>
+              <td id="maxcol">Maximum Column Value</td>
+              <td><input type="text" class="form-control" id="v2" placeholder="Enter a number" name="v2" required></td>
+              <td><div class="slider"id="sliderYEnd"></div></td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <!-- table will be produced here-->
+      <table id="mul">
+        <tr id="temp">
+          <td><table id="myTable"></table></td>
+        </tr>
+      </table>
+    </tr>
+  </table>
+  <!-- buttons to produce or save table-->
+  <button id='submit' type="submit" class="btn btn-default" onclick='generate_table()'>Submit</button>
+  <button id='save' type="submit" class="btn btn-default" onclick='save_table()'>Save</button>
+<!-- table will be saved in tabs-->
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Table 1</a></li>
+      <li><a href="#tabs-2">Table 2</a></li>
+      <li><a href="#tabs-3">Table 3</a></li>
+    </ul>
+    <div id="tabs-1">
+      <table id="table-1"></table>
+    </div>
+    <div id="tabs-2">
+      <table id="table-2"></table>
+    </div>
+    <div id="tabs-3">
+      <table id="table-3"></table>
+    </div>
+  </div>
+</div>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+
+</body>
+
+</html>

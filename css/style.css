@@ -1,0 +1,88 @@
+/*
+Date: November 15, 2018
+SID: 01617504
+91.61 GUI Programming I Assignment: Creating an Interactive Dynamic Table
+Mai Pham, UMass Lowell Computer Science, Mai_Pham@student.uml.edu
+Copyright (c) 2018 by Mai Pham. All rights reserved.
+*/
+
+/* sets font of the whole page*/
+body{
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+/* sets font and background color of table parameters */
+#myTable tr:nth-child(1), #myTable td:nth-child(1){
+  background-color: black;
+  color: pink;
+}
+#table-1 tr:nth-child(1), #table-1 td:nth-child(1){
+  background-color: black;
+  color: white;
+}
+/* formats table cells */
+td{
+  padding: 10px;
+  text-align: center;
+}
+
+/* formats myTable cells in a checkerboard display */
+#myTable tr:nth-child(2n+3) td:nth-child(2n+2), #myTable tr:nth-child(2n+2) td:nth-child(2n + 3) {
+  background-color:pink;
+}
+/* formats table-1 cells in a checkerboard display */
+#table-1 tr:nth-child(2n+3) td:nth-child(2n+2), #table-1 tr:nth-child(2n+2) td:nth-child(2n + 3) {
+  background-color:white;
+}
+
+/* formats error message to be directly next to input boxes */
+p{
+  display: inline;
+}
+
+/* sets color and position of error messages */
+.message_err{
+  color: #ffc14d;
+  padding-left: 20px;
+}
+
+/* sets background color of input box when there is an error */
+.input_err{
+  background-color: #ffc14d;
+}
+
+/* sets font and background color and location of button*/
+#save{
+  color: black;
+  padding:10px;
+  margin:20px;
+}
+/*form design*/
+#multiply-form{
+  min-width: 20%;
+  display: block;
+}
+#multiply-form td{
+  padding: 10px;
+}
+.container td{
+  max-width: 1000px;
+}
+
+#myTable td{
+    padding: 10px;
+}
+#tabs{
+  background-color:pink;
+}
+
+.table{
+  display: inline-block;
+}
+/*slider design*/
+.slider{
+  min-width: 300px;
+}
+.slider .ui-slider-range {
+	background: pink;
+}
